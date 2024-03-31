@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#splash {
+    font-family: Poppins,sans-serif;
+    letter-spacing: .4rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+#splash {
+    position: fixed;
+    z-index: 1;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1.5s;
+}
+
+.splash-header {
+    font-size: 3rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: #0565ce;
+}
+
+.splash-header .splash-logo:nth-child(even) {
+    color: #fff;
+}
+
+.splash-logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.splash-logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: .5s ease-in-out;
+}
+
+.splash-logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
