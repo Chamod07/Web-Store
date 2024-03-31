@@ -99,7 +99,7 @@ const renderCart = () => {
           <span class="amount">${product.quantity}</span>
           <span class="plus" onclick="addToCart('${product.id}')">&#x2b</span>
         </div>
-        <div class="price">$${product.price * product.quantity}<button class="delete-btn" onclick="deleteProduct('${product.id}')">
+        <div class="price">$${(product.price * product.quantity).toFixed(2)}<button class="delete-btn" onclick="deleteProduct('${product.id}')">
             <i class="material-icons">delete</i>
         </button></div>
         `;
@@ -136,7 +136,6 @@ checkoutBtn.addEventListener('click', () => {
     alert('There are no products in the cart.');
   } else {
     window.location.href = 'checkout.html';
-
 
     updateCartIcon();
     renderCart();
